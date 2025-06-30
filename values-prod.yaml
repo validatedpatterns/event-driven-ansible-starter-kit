@@ -35,14 +35,14 @@ clusterGroup:
     aap:
       name: ansible-automation-platform
       namespace: ansible-automation-platform
-      project: hub
+      project: prod
       chart: ansible-automation-platform-instance
       chartVersion: 0.1.*
 
     aap-config:
       name: aap-config
       namespace: aap-config
-      project: hub
+      project: prod
       chart: aap-config
       chartVersion: 0.1.*
       extraValueFiles:
@@ -51,13 +51,13 @@ clusterGroup:
     vault:
       name: vault
       namespace: vault
-      project: hub
+      project: prod
       chart: hashicorp-vault
       chartVersion: 0.1.*
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
-      project: hub
+      project: prod
       chart: golang-external-secrets
       chartVersion: 0.1.*
   imperative:
