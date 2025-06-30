@@ -1,0 +1,4 @@
+---
+agof:
+  iac_repo: https://github.com/validatedpatterns-demos/agof_null_config.git
+  iac_revision: main

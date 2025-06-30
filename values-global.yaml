@@ -1,12 +1,12 @@
 ---
 global:
-  pattern: multicloud-gitops
+  pattern: event-driven-ansible-starter-kit
   options:
     useCSV: false
     syncPolicy: Automatic
     installPlanApproval: Automatic
 main:
-  clusterGroupName: hub
+  clusterGroupName: prod
   multiSourceConfig:
     enabled: true
     clusterGroupChartVersion: "0.9.*"
