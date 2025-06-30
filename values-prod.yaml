@@ -4,6 +4,8 @@ clusterGroup:
   namespaces:
     - vault
     - golang-external-secrets
+    - ansible-automation-platform
+    - aap-config
   subscriptions:
     aap-operator:
       name: ansible-automation-platform-operator
