@@ -57,9 +57,9 @@ clusterGroup:
       chart: hashicorp-vault
       chartVersion: 0.1.*
       overrides:
-        - name: "server.dataStorage.storageClass"
+        - name: "vault.server.dataStorage.storageClass"
           value: "gp2-csi"
-        - name: "server.dataStorage.size"
+        - name: "vault.server.dataStorage.size"
           value: "5Gi"
     golang-external-secrets:
       name: golang-external-secrets
