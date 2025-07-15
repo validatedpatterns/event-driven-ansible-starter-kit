@@ -45,9 +45,12 @@ clusterGroup:
       name: aap-config
       namespace: aap-config
       project: prod
-      chart: aap-config
-      chartVersion: 0.1.*
-      extraValueFiles:
+      path: "."
+      chartVersion: main
+      repoURL: https://github.com/mhjacks/aap-config-chart.git
+#      chart: aap-config
+#      chartVersion: 0.1.*
+#      extraValueFiles:
         - '$patternref/overrides/values-aap-config-edask.yaml'
 
     vault:
