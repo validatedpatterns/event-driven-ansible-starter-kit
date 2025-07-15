@@ -1,4 +1,5 @@
 ---
 agof:
+  extraPlaybookOpts: '-vvv'
   iac_repo: https://github.com/validatedpatterns-demos/eda-starter-kit-config-as-code.git
   iac_revision: main
