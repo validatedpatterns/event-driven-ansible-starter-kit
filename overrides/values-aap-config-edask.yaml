@@ -6,3 +6,6 @@ agof:
 
   agof_repo: https://github.com/mhjacks/agof.git
   agof_revision: pre_config_fixup
+
+configJob:
+  schedule: "*/2 * * * *"
