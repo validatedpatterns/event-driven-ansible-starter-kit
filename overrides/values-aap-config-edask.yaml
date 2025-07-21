@@ -4,8 +4,9 @@ agof:
   iac_repo: https://github.com/validatedpatterns-demos/eda-starter-kit-config-as-code.git
   iac_revision: main
 
-  agof_repo: https://github.com/mhjacks/agof.git
-  agof_revision: pre_config_fixup
+#  Go back to mainstream v2 version (default)
+#  agof_repo: https://github.com/mhjacks/agof.git
+#  agof_revision: pre_config_fixup
 
 # if you really need a lot of feedback
 #configJob:
