@@ -21,6 +21,6 @@
         url_username: "{{ event_username }}"
         url_password: "{{ event_password }}"
         body: "{{ event_body }}"
-        body_format: form-urlencoded
+        body_format: json
         validate_certs: "{{ event_validate_certs }}"
         force_basic_auth: true
