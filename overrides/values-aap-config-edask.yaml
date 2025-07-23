@@ -9,4 +9,4 @@ agof:
 #  agof_revision: pre_config_fixup
 
 configJob:
-  schedule: "*/15 * * * *"
+  schedule: "15 */2 * * *"
