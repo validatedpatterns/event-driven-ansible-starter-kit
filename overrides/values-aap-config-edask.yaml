@@ -8,6 +8,5 @@ agof:
 #  agof_repo: https://github.com/mhjacks/agof.git
 #  agof_revision: pre_config_fixup
 
-# if you really need a lot of feedback
-#configJob:
-#  schedule: "*/2 * * * *"
+configJob:
+  schedule: "*/15 * * * *"
