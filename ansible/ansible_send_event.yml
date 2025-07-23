@@ -1,0 +1,26 @@
+---
+- name: Get event streams
+  ansible.builtin.import_playbook: ansible_get_event_streams.yml
+
+- name: Post event to event stream
+  hosts: localhost
+  become: false
+  gather_facts: false
+  vars:
+    event_url: "{{ eda_event_streams.event_streams[0].url }}"
+    event_username: test
+    event_password: password
+    event_status: ping
+    event_body: '{ "status": "{{ event_status }}" }'
+    event_validate_certs: false
+  tasks:
+    - name: Post event
+      ansible.builtin.uri:
+        url: "{{ event_url }}"
+        method: POST
+        url_username: "{{ event_username }}"
+        url_password: "{{ event_password }}"
+        body: "{{ event_body }}"
+        body_format: form-urlencoded
+        validate_certs: "{{ event_validate_certs }}"
+        force_basic_auth: true
