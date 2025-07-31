@@ -1,0 +1,36 @@
+---
+- name: Get credentials
+  ansible.builtin.import_playbook: ansible_get_credentials.yml
+
+- name: Get event stream info
+  hosts: localhost
+  become: false
+  gather_facts: false
+  vars:
+    controller_host: "{{ ansible_host }}"
+    controller_username: admin
+    controller_password: "{{ admin_password }}"
+    controller_validate_certs: false
+    debug_variables: false
+  tasks:
+    - name: Show variables
+      ansible.builtin.debug:
+        msg:
+          - "controller_host: '{{ controller_host }}'"
+          - "controller_username: '{{ controller_username }}'"
+          - "controller_password: '{{ controller_password }}'"
+          - "controller_validate_certs: '{{ controller_validate_certs }}'"
+      when: debug_variables
+
+    - name: Retrieve configured event streams
+      ansible.eda.event_stream_info:
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: "{{ controller_validate_certs }}"
+      register: eda_event_streams
+
+    - name: Show important parts of configured event streams
+      ansible.builtin.debug:
+        msg: "{{ item.name }} for {{ item.organization.name }}: {{ item.url }}"
+      loop: "{{ eda_event_streams.event_streams }}"
