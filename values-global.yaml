@@ -9,5 +9,4 @@ main:
   clusterGroupName: prod
   multiSourceConfig:
     enabled: true
-    clusterGroupGitRepoUrl: https://github.com/mhjacks/clustergroup-chart
-    clusterGroupChartGitRevision: add_rbac
+    clusterGroupChartVersion: "0.9.*"
