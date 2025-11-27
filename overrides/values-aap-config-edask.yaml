@@ -1,4 +1,12 @@
 ---
 agof:
+  extraPlaybookOpts: '-vvv'
   iac_repo: https://github.com/validatedpatterns-demos/eda-starter-kit-config-as-code.git
   iac_revision: main
+
+#  Go back to mainstream v2 version (default)
+#  agof_repo: https://github.com/mhjacks/agof.git
+#  agof_revision: pre_config_fixup
+
+configJob:
+  schedule: "15 */2 * * *"

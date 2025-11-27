@@ -21,7 +21,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v7
+        uses: super-linter/super-linter/slim@v8
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
@@ -38,7 +38,8 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           VALIDATE_YAML: false
           VALIDATE_YAML_PRETTIER: false
+          FILTER_REGEX_EXCLUDE: 'common/**'
           # VALIDATE_DOCKERFILE_HADOLINT: false
           # VALIDATE_MARKDOWN: false
           # VALIDATE_NATURAL_LANGUAGE: false
-          # VALIDATE_TEKTON: false
+          # VALIDATE_TEKTON: fals

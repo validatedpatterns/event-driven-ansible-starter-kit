@@ -3,6 +3,7 @@
 *.swo
 values-secret*
 .*.expected.yaml
+.ansible
 pattern-vault.init
 vault.init
 super-linter.log
